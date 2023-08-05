@@ -6,7 +6,7 @@
 /*   By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 14:49:24 by lumarque          #+#    #+#             */
-/*   Updated: 2023/07/29 16:28:07 by lumarque         ###   ########.fr       */
+/*   Updated: 2023/08/05 16:27:27 by lumarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,18 +36,11 @@ typedef enum e_type {
 	RRR
 }	t_type;
 
-typedef struct s_data
+typedef struct s_stack
 {
 	int				n;
 	int				pos;
-	struct s_data	*next;
-	struct s_data	*prev;
-}	t_data;
-
-typedef struct s_stack
-{
-	t_data	*a;
-	t_data	*b;
+	struct s_stack	*next;
 }					t_stack;
 
 

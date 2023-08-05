@@ -6,29 +6,29 @@
 /*   By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 14:18:14 by lumarque          #+#    #+#             */
-/*   Updated: 2023/07/29 18:24:02 by lumarque         ###   ########.fr       */
+/*   Updated: 2023/08/05 16:36:56 by lumarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	push(t_data *src, t_data *dst)
+static void	push(t_stack *src, t_stack *dst)
 {
-	t_data	*tmp;
+	t_stack	*tmp;
 
-	if (!(src))
+	if (!src)
 		return ;
-	tmp = (src)->next;
-	(src)->next = dst;
+	tmp = src->next;
+	src->next = dst;
 	dst = src;
 	src = tmp;
 }
 
-static void	swap(t_data *top)
+static void	swap(t_stack *top)
 {
 	int	tmp;
 
-	if (!(top) || (top) == (top)->next)
+	if (!top || top == top->next)
 		return ;
 	tmp = top->n;
 	top->n = top->next->n;
@@ -36,32 +36,34 @@ static void	swap(t_data *top)
 	
 }
 
-static void	rotate(t_data *first, bool is_reverse)
+static void	rotate(t_stack *first, bool is_reverse)
 {
-	t_data* last;
-	t_data* second_node;
+	t_stack* last;
+	t_stack* aux;
 	
-	if (!(first) || (first) == (first)->next)
+	if (!first || first == first->next)
 		return ;
 	last = first;
 	while (last->next)
 		last = last->next;
 	if (is_reverse == false)
 	{
-		first = (first)->next;
-		first->next->prev = NULL;
+		aux = first;
+		first = first->next;
+		last->next = aux;
+		aux->next = NULL;
 	}
 	else
-	{
-		second_node = first->next;
-		second_node->prev = NULL;
+	{	
+		while (aux->next->next)
+			aux = aux->next;
+		aux->next = NULL;
+		last->next = first;
 	}
-	last->next = first;
-	first->prev = last;
-	first->next = NULL;
+
 }
 
-void	run_action(t_type action, t_stack *stack)
+void	run_action(t_type action, t_stack a, t_stack b)
 {
 	bool	is_reverse;
 
@@ -69,15 +71,15 @@ void	run_action(t_type action, t_stack *stack)
 	if (action >= RRA)
 		is_reverse = true;
 	if (action == PA)
-		push(&stack->b, &stack->a);
+		push(&b, &a);
 	if (action == PB)
-		push(&stack->a, &stack->b);
+		push(&a, &b);
 	if (action == SA || action == SS)
-		swap(&stack->a);
+		swap(&a);
 	if (action == SB || action == SS)
-		swap(&stack->b);
+		swap(&b);
 	if (action == RA || action == RR || action == RRA || action == RRR)
-		rotate(&stack->a, is_reverse);
+		rotate(&a, is_reverse);
 	if (action == RB || action == RR || action == RRB || action == RRR)
-		rotate(&stack->b, is_reverse);
+		rotate(&b, is_reverse);
 }
