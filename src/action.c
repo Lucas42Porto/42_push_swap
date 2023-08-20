@@ -6,7 +6,7 @@
 /*   By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 14:18:14 by lumarque          #+#    #+#             */
-/*   Updated: 2023/08/05 16:36:56 by lumarque         ###   ########.fr       */
+/*   Updated: 2023/08/20 16:53:44 by lumarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,17 @@ static void	push(t_stack *src, t_stack *dst)
 
 	if (!src)
 		return ;
-	tmp = src->next;
-	src->next = dst;
+	tmp = dst;
 	dst = src;
-	src = tmp;
+	src = src->next;
+	dst->next = tmp;
 }
 
 static void	swap(t_stack *top)
 {
 	int	tmp;
 
-	if (!top || top == top->next)
+	if (!top || !(top->next))
 		return ;
 	tmp = top->n;
 	top->n = top->next->n;
@@ -63,7 +63,7 @@ static void	rotate(t_stack *first, bool is_reverse)
 
 }
 
-void	run_action(t_type action, t_stack a, t_stack b)
+void	run_action(t_type action, t_stack *a, t_stack *b)
 {
 	bool	is_reverse;
 
