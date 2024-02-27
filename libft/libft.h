@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucas <lucas@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 14:47:30 by lumarque          #+#    #+#             */
-/*   Updated: 2024/02/09 11:31:22 by lucas            ###   ########.fr       */
+/*   Updated: 2024/02/19 15:49:32 by lumarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,5 @@ int			ft_isascii(int c);
 int			ft_toupper(int c);
 int			ft_tolower(int c);
 int			ft_strncmp(const char *str1, const char *str2, size_t n);
-
-
 
 #endif

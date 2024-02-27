@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lucas <lucas@student.42.fr>                +#+  +:+       +#+         #
+#    By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/29 14:08:57 by lumarque          #+#    #+#              #
-#    Updated: 2024/02/08 22:44:07 by lucas            ###   ########.fr        #
+#    Updated: 2024/02/19 15:45:23 by lumarque         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,10 +40,10 @@ SRC_2 =	srcs/push_swap/algorithm.c \
 		srcs/push_swap/lst_utils_2.c \
 		srcs/push_swap/ft_parse_args_quoted.c \
 		srcs/push_swap/ft_list_args.c \
-		srcs/push_swap/ft_check_args.c \
 		srcs/push_swap/ft_sort_big.c \
 		srcs/push_swap/ft_sort_three.c \
 		srcs/push_swap/ft_rotate_type.c \
+		#srcs/push_swap/ft_check_args.c \
 		
 BONUS_SRC = srcs/checker/checker.c \
 			srcs/checker/checker_utils.c \

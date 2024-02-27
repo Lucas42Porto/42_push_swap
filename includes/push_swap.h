@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/19 15:50:12 by lumarque          #+#    #+#             */
+/*   Updated: 2024/02/19 15:51:34 by lumarque         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
@@ -11,23 +22,23 @@
 
 typedef struct s_stack
 {
-	long			nbr;
-	long			index;
 	struct s_stack	*next;
 	struct s_stack	*prev;
+	long			nbr;
+	long			index;
 }	t_stack;
 
 void		list_args(char **argv, t_stack **stack_a);
 void		ft_add_back(t_stack **stack, t_stack *stack_new);
 t_stack		*ft_stack_new(int content);
-int		check_args(char **argv);
+int			check_args(char **argv);
 void		alpha_check(char **argv);
-int		check_error(char **argv, int i, int j);
-int		ft_checkdup(t_stack *a);
-int		ft_isalpha(int c);
-int		sign(int c);
-int		digit(int c);
-int		space(int c);
+int			check_error(char **argv, int i, int j);
+int			ft_checkdup(t_stack *a);
+int			ft_isalpha(int c);
+int			sign(int c);
+int			digit(int c);
+int			space(int c);
 void		ft_error(void);
 void		ft_free(t_stack **lst);
 t_stack		*ft_lstlast(t_stack *lst);

@@ -1,5 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   algorithm.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/19 15:44:42 by lumarque          #+#    #+#             */
+/*   Updated: 2024/02/19 15:44:44 by lumarque         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
+
+static void	ft_justsign(const char *str)
+{
+	if ((str[0] == '+' || str[0] == '-') && (str[1] == '\0'))
+		ft_error();
+}
 
 // This function does three things.
 // 1. It checks if the number of input is less than 2.
@@ -80,7 +97,10 @@ t_stack	*ft_process(int argc, char **argv)
 	if (argc < 2)
 		exit(0);
 	if (argc == 2)
+	{
+		ft_justsign(argv[1]);
 		a = ft_sub_process(argv);
+	}
 	else
 	{
 		while (i < argc)
