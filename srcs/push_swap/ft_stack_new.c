@@ -6,13 +6,12 @@
 /*   By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 15:46:43 by lumarque          #+#    #+#             */
-/*   Updated: 2024/02/19 15:46:43 by lumarque         ###   ########.fr       */
+/*   Updated: 2024/03/12 11:31:59 by lumarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-// Creates new stack node with given number.
 t_stack	*ft_stack_new(int content)
 {
 	t_stack	*new;

@@ -6,16 +6,12 @@
 /*   By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 15:47:23 by lumarque          #+#    #+#             */
-/*   Updated: 2024/02/19 15:47:23 by lumarque         ###   ########.fr       */
+/*   Updated: 2024/03/12 11:34:29 by lumarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-// This function calculates how many times 
-// we should rotate the stacks together.
-// Because after a certain amoun of rotate, we will
-// proceed only with one stack rotation.
 int	ft_case_rarb(t_stack *a, t_stack *b, int c)
 {
 	int	i;
@@ -26,11 +22,6 @@ int	ft_case_rarb(t_stack *a, t_stack *b, int c)
 	return (i);
 }
 
-// This function calculates how many times we should rotate the stacks together.
-// Because after a certain amoun of rotate, we will proceed only with one stack
-// rotation. Since here we have reverse rotate,rather than index number,
-// we check reverse index number which is 
-// calculated by list_size - index_number.
 int	ft_case_rrarrb(t_stack *a, t_stack *b, int c)
 {
 	int	i;
@@ -43,8 +34,6 @@ int	ft_case_rrarrb(t_stack *a, t_stack *b, int c)
 	return (i);
 }
 
-// Again, this function makes similar calculations.
-// This function do same calculations for rra+rb case.
 int	ft_case_rrarb(t_stack *a, t_stack *b, int c)
 {
 	int	i;
@@ -56,8 +45,6 @@ int	ft_case_rrarb(t_stack *a, t_stack *b, int c)
 	return (i);
 }
 
-// Again, this function makes similar calculations.
-// This function do same calculations for ra+rrb case.
 int	ft_case_rarrb(t_stack *a, t_stack *b, int c)
 {
 	int	i;

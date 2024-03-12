@@ -6,14 +6,12 @@
 /*   By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 15:47:30 by lumarque          #+#    #+#             */
-/*   Updated: 2024/02/19 15:47:30 by lumarque         ###   ########.fr       */
+/*   Updated: 2024/03/12 11:34:53 by lumarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-// This function calculates the required amount of rotation.
-// Calculations are done for ra+rb case.
 int	ft_case_rarb_a(t_stack *a, t_stack *b, int c)
 {
 	int	i;
@@ -24,8 +22,6 @@ int	ft_case_rarb_a(t_stack *a, t_stack *b, int c)
 	return (i);
 }
 
-// This function calculates the required amount of rotation.
-// Calculations are done for rra+rrb case.
 int	ft_case_rrarrb_a(t_stack *a, t_stack *b, int c)
 {
 	int	i;
@@ -38,8 +34,6 @@ int	ft_case_rrarrb_a(t_stack *a, t_stack *b, int c)
 	return (i);
 }
 
-// This function calculates the required amount of rotation.
-// Calculations are done for ra+rrb case.
 int	ft_case_rarrb_a(t_stack *a, t_stack *b, int c)
 {
 	int	i;
@@ -51,8 +45,6 @@ int	ft_case_rarrb_a(t_stack *a, t_stack *b, int c)
 	return (i);
 }
 
-// This function calculates the required amount of rotation.
-// Calculations are done for rra+rb case.
 int	ft_case_rrarb_a(t_stack *a, t_stack *b, int c)
 {
 	int	i;

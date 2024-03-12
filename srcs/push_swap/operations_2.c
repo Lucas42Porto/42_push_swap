@@ -6,13 +6,12 @@
 /*   By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 15:47:05 by lumarque          #+#    #+#             */
-/*   Updated: 2024/02/19 15:47:06 by lumarque         ###   ########.fr       */
+/*   Updated: 2024/03/12 11:32:49 by lumarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-// rr : ra and rb at the same time
 void	ft_rr(t_stack **a, t_stack **b, int j)
 {
 	t_stack	*tmp;
@@ -33,7 +32,6 @@ void	ft_rr(t_stack **a, t_stack **b, int j)
 		write(1, "rr\n", 3);
 }
 
-// Second part of the rrr function
 void	ft_rrr_sub(t_stack **b, int j)
 {
 	t_stack	*tmp;
@@ -57,7 +55,6 @@ void	ft_rrr_sub(t_stack **b, int j)
 		write(1, "rrr\n", 4);
 }
 
-// rrr : rra and rrb at the same time.
 void	ft_rrr(t_stack **a, t_stack **b, int j)
 {
 	t_stack	*tmp;
@@ -82,8 +79,6 @@ void	ft_rrr(t_stack **a, t_stack **b, int j)
 	ft_rrr_sub(b, j);
 }
 
-// pb (push b) : take the first element at the top of a and put it 
-// at the top of b. Do nothing if a is empty.
 void	ft_pb(t_stack **stack_a, t_stack **stack_b, int j)
 {
 	t_stack	*tmp;
@@ -98,8 +93,6 @@ void	ft_pb(t_stack **stack_a, t_stack **stack_b, int j)
 		write(1, "pb\n", 3);
 }
 
-// rrb (reverse rotate b) : shift down all elements of stack b by 1. 
-// The last element becomes the first one.
 void	ft_rrb(t_stack **b, int j)
 {
 	t_stack	*tmp;

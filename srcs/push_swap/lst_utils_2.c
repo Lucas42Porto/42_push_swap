@@ -6,14 +6,12 @@
 /*   By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 15:46:51 by lumarque          #+#    #+#             */
-/*   Updated: 2024/02/19 15:46:52 by lumarque         ###   ########.fr       */
+/*   Updated: 2024/03/12 11:36:14 by lumarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-// This function checks the index of a number
-// 	 in the stack.
 int	ft_find_index(t_stack *a, int nbr)
 {
 	int		i;
@@ -28,9 +26,6 @@ int	ft_find_index(t_stack *a, int nbr)
 	return (i);
 }
 
-// This function finds the correct place of the number in stack_b.
-// In other words, it check what index number nbr_push will get 
-// after it is being pushed to the stack_b.
 int	ft_find_place_b(t_stack *stack_b, int nbr_push)
 {
 	int		i;
@@ -54,9 +49,6 @@ int	ft_find_place_b(t_stack *stack_b, int nbr_push)
 	return (i);
 }
 
-// This function finds the correct place of the number in stack_a.
-// In other words, it check what index number nbr_push will get 
-// after it is being pushed to the stack_a.
 int	ft_find_place_a(t_stack *stack_a, int nbr_push)
 {
 	int		i;

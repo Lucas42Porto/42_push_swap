@@ -6,14 +6,12 @@
 /*   By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 15:47:11 by lumarque          #+#    #+#             */
-/*   Updated: 2024/02/19 15:47:11 by lumarque         ###   ########.fr       */
+/*   Updated: 2024/03/12 11:32:57 by lumarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-// rb (rotate b) : shift up all elements of stack b by 1. 
-// The first element becomes the last one.
 void	ft_rb(t_stack **b, int j)
 {
 	t_stack	*tmp;
@@ -29,8 +27,6 @@ void	ft_rb(t_stack **b, int j)
 		write(1, "rb\n", 3);
 }
 
-// sb (swap b) : swap the first 2 elements at the top of stack b. 
-// Do nothing if there is only one or no elements).
 void	ft_sb(t_stack **b, int j)
 {
 	t_stack	*tmp;

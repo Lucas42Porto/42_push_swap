@@ -6,14 +6,12 @@
 /*   By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 15:45:53 by lumarque          #+#    #+#             */
-/*   Updated: 2024/02/19 15:45:55 by lumarque         ###   ########.fr       */
+/*   Updated: 2024/03/12 11:17:49 by lumarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-// This function free the string which is 
-// the integer values in between quotes.
 void	ft_freestr(char **lst)
 {
 	char	*n1;
@@ -29,9 +27,6 @@ void	ft_freestr(char **lst)
 	*lst = NULL;
 }
 
-// Function to parse the arguments from the quoted string
-// and send them to list_args function to add them into list.
-// With ft_split we split numbers from spaces.
 t_stack	*ft_parse_args_quoted(char **argv)
 {
 	t_stack	*stack_a;

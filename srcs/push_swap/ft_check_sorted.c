@@ -6,13 +6,12 @@
 /*   By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 15:45:03 by lumarque          #+#    #+#             */
-/*   Updated: 2024/02/19 15:45:05 by lumarque         ###   ########.fr       */
+/*   Updated: 2024/03/12 11:16:58 by lumarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-// This function checks if the stack is sorted.
 int	ft_checksorted(t_stack *stack_a)
 {
 	int	i;

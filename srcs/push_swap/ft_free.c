@@ -6,13 +6,12 @@
 /*   By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 15:45:41 by lumarque          #+#    #+#             */
-/*   Updated: 2024/02/19 15:45:43 by lumarque         ###   ########.fr       */
+/*   Updated: 2024/03/12 11:17:28 by lumarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-// This function frees the stack.
 void	ft_free(t_stack **lst)
 {
 	t_stack	*tmp;

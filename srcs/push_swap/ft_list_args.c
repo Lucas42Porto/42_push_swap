@@ -6,19 +6,12 @@
 /*   By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 15:45:47 by lumarque          #+#    #+#             */
-/*   Updated: 2024/02/19 15:46:02 by lumarque         ###   ########.fr       */
+/*   Updated: 2024/03/12 11:17:37 by lumarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-// While arguments are valid, we start to add them 
-// into stack here one by one with while loop.
-// Atoi takes the number and turn it into an integer 
-// value where we can make math operations.
-// With stack new we create a new node for the current 
-// argument without linking it to list.
-// We make linking stage in ft_add_back call.
 void	list_args(char **argv, t_stack **stack_a)
 {
 	long	i;

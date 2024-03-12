@@ -6,13 +6,12 @@
 /*   By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 15:45:08 by lumarque          #+#    #+#             */
-/*   Updated: 2024/02/19 15:45:12 by lumarque         ###   ########.fr       */
+/*   Updated: 2024/03/12 11:17:15 by lumarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-//chec if the chracter is negative
 int	sign(int c)
 {
 	if (c == '+' || c == '-')
@@ -20,7 +19,6 @@ int	sign(int c)
 	return (0);
 }
 
-//check if the character is digit
 int	digit(int c)
 {
 	if ((c >= 48) && (c <= 57))
@@ -28,7 +26,6 @@ int	digit(int c)
 	return (0);
 }
 
-//check if character is space character
 int	space(int c)
 {
 	if (c == ' ')
@@ -36,7 +33,6 @@ int	space(int c)
 	return (0);
 }
 
-//function to check if given arguments is valid
 int	check_error(char **argv, int i, int j)
 {
 	while (argv[i])
